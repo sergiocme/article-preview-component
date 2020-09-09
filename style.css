@@ -2,6 +2,7 @@
   --hsl-light-grayish-blue: hsl(210, 46%, 95%);
   --hsl-very-dark-grayish-blue: hsl(217, 19%, 35%);
   --hsl-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --hsl-grayish-blue: hsl(212, 23%, 69%);
 }
 
 * {
@@ -60,4 +61,40 @@ body {
   font-size: 1.3rem;
   font-weight: 500;
   color: var(--hsl-desaturated-dark-blue);
+}
+
+.post-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.author-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1.6rem;
+}
+
+.author-info .title {
+  font-size: 1.4rem;
+}
+
+.author-info .date {
+  font-family: Manrope;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--hsl-grayish-blue);
 }
