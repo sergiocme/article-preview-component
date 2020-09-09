@@ -66,6 +66,7 @@ body {
 .post-footer {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
 }
@@ -97,4 +98,11 @@ body {
   font-size: 1.3rem;
   font-weight: 500;
   color: var(--hsl-grayish-blue);
+}
+
+.share-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: none;
+  border-radius: 50%;
 }
