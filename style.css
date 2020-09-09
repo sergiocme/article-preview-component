@@ -1,6 +1,7 @@
 :root {
   --hsl-light-grayish-blue: hsl(210, 46%, 95%);
   --hsl-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --hsl-desaturated-dark-blue: hsl(214, 17%, 51%);
 }
 
 * {
@@ -51,4 +52,12 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--hsl-very-dark-grayish-blue);
+}
+
+.text-content {
+  margin: 2rem 0;
+  font-family: Manrope;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--hsl-desaturated-dark-blue);
 }
