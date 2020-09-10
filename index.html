@@ -39,11 +39,23 @@
           </span>
         </div>
 
-        <button class="share-button">
+        <button id="share" class="share-button">
           <img alt="" src="images/icon-share.svg" />
         </button>
       </footer>
     </div>
   </div>
+
+  <script>
+    const state = {
+      share: false,
+    };
+
+    const shareButton = document.getElementById('share');
+
+    shareButton.addEventListener('click', () => {
+      state.share = !state.share;
+    });
+  </script>
 </body>
 </html>
