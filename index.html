@@ -39,7 +39,23 @@
           </span>
         </div>
 
-        <button id="share" class="share-button">
+        <button id="activateShare" class="share-button">
+          <img alt="" src="images/icon-share.svg" />
+        </button>
+      </footer>
+
+      <footer class="active-share-footer display-none">
+        <div class="buttons-content">
+          <span class="share-text">
+            Share
+          </span>
+
+          <img alt="Share on Facebook" src="images/icon-facebook.svg" />
+          <img alt="Share on Twitter" src="images/icon-twitter.svg" />
+          <img alt="Share on Pinterest" src="images/icon-pinterest.svg" />
+        </div>
+
+        <button id="closeShare" class="share-button">
           <img alt="" src="images/icon-share.svg" />
         </button>
       </footer>
@@ -47,15 +63,30 @@
   </div>
 
   <script>
-    const state = {
+    let state = {
       share: false,
     };
 
-    const shareButton = document.getElementById('share');
+    const activateShareButton = document.getElementById('activateShare');
+    const closeShareButton = document.getElementById('closeShare');
 
-    shareButton.addEventListener('click', () => {
+    const onShareStateHandler = {
+      set(target, prop, reciver) {
+        if (prop === 'share') {
+          console.log('share state changed');
+        }
+        return Reflect.set(...arguments);
+      },
+    };
+
+    function setShareState() {
       state.share = !state.share;
-    });
+    }
+
+    state = new Proxy(state, onShareStateHandler);
+
+    activateShareButton.addEventListener('click', setShareState);
+    closeShareButton.addEventListener('click', setShareState);
   </script>
 </body>
 </html>
