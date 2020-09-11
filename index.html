@@ -62,31 +62,30 @@
     </div>
   </div>
 
-  <script>
-    let state = {
-      share: false,
-    };
+  <script type="module">
+    import createState from './scripts/stateFactory.js';
 
+    const { state, subscribe, setShare } = createState();
+
+    const [postFooter] = document.getElementsByClassName('post-footer');
+    const [activeShareFooter] = document.getElementsByClassName('active-share-footer');
     const activateShareButton = document.getElementById('activateShare');
     const closeShareButton = document.getElementById('closeShare');
 
-    const onShareStateHandler = {
-      set(target, prop, reciver) {
-        if (prop === 'share') {
-          console.log('share state changed');
-        }
-        return Reflect.set(...arguments);
-      },
-    };
-
-    function setShareState() {
-      state.share = !state.share;
+    function onShareChanges(updatedState) {
+      if (updatedState.share === true) {
+        postFooter.classList.add('display-none');
+        activeShareFooter.classList.remove('display-none');
+      } else {
+        postFooter.classList.remove('display-none');
+        activeShareFooter.classList.add('display-none');
+      }
     }
 
-    state = new Proxy(state, onShareStateHandler);
+    subscribe(onShareChanges);
 
-    activateShareButton.addEventListener('click', setShareState);
-    closeShareButton.addEventListener('click', setShareState);
+    activateShareButton.addEventListener('click', setShare);
+    closeShareButton.addEventListener('click', setShare);
   </script>
 </body>
 </html>
