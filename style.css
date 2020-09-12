@@ -37,7 +37,7 @@ body {
 .cover {
   width: 100%;
   height: 20rem;
-  margin-bottom: 2rem;
+
   object-fit: cover;
   object-position: 0 30%;
 }
@@ -45,7 +45,7 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  padding: 2rem 3.4rem;
+  padding: 4rem 3.4rem 2rem;
 }
 
 .title {
@@ -68,7 +68,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2rem;
+  padding: 0 3.4rem 2rem;
 }
 
 .author-content {
@@ -108,6 +108,7 @@ body {
 }
 
 .active-share-footer {
+  height: 6rem;
   background: var(--hsl-very-dark-grayish-blue);
 }
 
