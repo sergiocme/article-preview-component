@@ -45,7 +45,7 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  padding: 4rem 3.4rem 2rem;
+  padding: 4rem 3.4rem 0;
 }
 
 .title {
@@ -68,7 +68,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3.4rem 2rem;
+  padding: 2rem 3.4rem;
 }
 
 .author-content {
@@ -108,10 +108,32 @@ body {
 }
 
 .active-share-footer {
-  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3.4rem;
+  height: 8rem;
   background: var(--hsl-very-dark-grayish-blue);
 }
 
 .display-none {
   display: none;
+}
+
+.buttons-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 6rem;
+}
+
+.buttons-content .share-text {
+  font-family: Manrope;
+  font-size: 1.4rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--hsl-light-grayish-blue);
 }
