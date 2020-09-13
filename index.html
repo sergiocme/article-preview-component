@@ -41,7 +41,7 @@
           </span>
         </div>
 
-        <button id="activateShare" class="share-button">
+        <button id="activate-share" class="share-button">
           <img alt="" src="images/icon-share.svg" />
         </button>
       </footer>
@@ -57,7 +57,7 @@
           <img alt="Share on Pinterest" src="images/icon-pinterest.svg" />
         </div>
 
-        <button id="closeShare" class="share-button">
+        <button id="close-share" class="share-button">
           <img alt="" src="images/icon-share.svg" />
         </button>
       </footer>
@@ -71,8 +71,8 @@
 
     const [postFooter] = document.getElementsByClassName('post-footer');
     const [activeShareFooter] = document.getElementsByClassName('active-share-footer');
-    const activateShareButton = document.getElementById('activateShare');
-    const closeShareButton = document.getElementById('closeShare');
+    const activateShareButton = document.getElementById('activate-share');
+    const closeShareButton = document.getElementById('close-share');
 
     function onShareChanges(updatedState) {
       if (updatedState.share === true) {
