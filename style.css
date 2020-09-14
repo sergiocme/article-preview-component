@@ -140,8 +140,9 @@ body {
 
 @media (min-width: 1440px) {
   .container {
-    width: 80rem;
     flex-direction: row;
+    overflow: visible;
+    width: 80rem;
   }
 
   .cover {
@@ -155,6 +156,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow: visible;
   }
 
   .post-footer {
